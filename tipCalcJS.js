@@ -12,11 +12,10 @@ function calculateTip() {
     var serviceQuality = $('#serviceQuality').val();
     var numPeople = $('#billPeople').val();
 
-    if (billAmount.toString().length > 6) {
-        window.alert("Cannot calculate values with more than 6 characters")
+    if (billAmount.length > 6) {
+        window.alert("Cannot calculate values with more than 6 characters!")
         return;
     }
-
     if (billAmount === "" || serviceQuality == null) {
         window.alert("Please select/enter values in the required fields! (Check for any misplaced decimals as well!)")
         return;
